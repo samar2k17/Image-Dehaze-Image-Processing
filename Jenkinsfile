@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'kaas' }
+    agent { label 'testing' }
     stages {
         stage('Check Pull-Request Status') {
             when { changeRequest target: 'master' }

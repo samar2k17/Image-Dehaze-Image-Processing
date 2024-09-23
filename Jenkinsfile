@@ -8,8 +8,7 @@ pipeline {
         stage('Apply Resources') {
             when { branch 'master' }
             steps {
-                applyPrmResources()
-                createTopicsAndAcls()
+                applyResources()
             }
         }
     }
@@ -35,16 +34,16 @@ def checkPullRequestStatus() {
     }
 }
 
-def applyPrmResources() {
+def applyResources() {
     script {
         // Replace with your actual logic, e.g., pulling images
         sh 'docker pull your-image:latest'
     }
 }
 
-def createTopicsAndAcls() {
-    script {
-        // Replace with your actual logic for topics and ACLs
-        sh 'docker run your-image create-topics-and-acls'
-    }
-}
+// def createTopicsAndAcls() {
+//     script {
+//         // Replace with your actual logic for topics and ACLs
+//         sh 'docker run your-image create-topics-and-acls'
+//     }
+// }

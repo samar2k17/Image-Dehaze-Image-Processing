@@ -5,7 +5,7 @@ pipeline {
             when { changeRequest target: 'master' }
             steps { checkPullRequestStatus() }
         }
-        stage('Apply Resources') {
+        stage('Apply Resorces') {
             when { branch 'master' }
             steps {
                 applyResources()
